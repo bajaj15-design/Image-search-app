@@ -1,0 +1,103 @@
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif;
+
+    }
+    body{
+        line-height:1.6;
+    }
+    h1{
+        background:#ffffff;
+        font-weight:bold;
+        text-align:center;
+        margin:0 40px 60px 0;
+    }
+    form{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+    #searchInput{
+        width:200px;
+        height:40px;
+        padding:10px;
+        border: 1px solid rgb(167, 126, 167);
+        box-shadow: 0 0 5px rgba(105, 39, 105, 0.5);
+    }
+
+    #searchInput:focus {
+    border: 2px solid rgb(105, 39, 105);
+    outline: none; 
+    }
+
+    #search-button{
+        height:40px;
+        padding:10px 20px;
+        background-color: rgb(167, 126, 167);
+        color:#fff;
+        border:none;
+        cursor:pointer;
+    }
+    #Search-results{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+        margin:0 auto   ;
+        max-width: 1200px;
+
+    }
+    .results-container{
+    margin-bottom:60px;
+        width:30%;
+        /* height:200px;    */
+        background-color: #fff;
+        border-radius:5px;
+        box-shadow: 0 0 5px rgba(105, 39, 105, 0.5);
+        overflow:hidden;
+    }
+    .results-container img{
+        width:100%;
+        height:200px;
+        object-fit:cover;  
+        transition: opacity 0.2s ease-in-out; 
+    }
+    .results-container img:hover{
+        opacity:0.8;
+    }
+    .results-container a{
+        display:block;
+        padding:10px;
+        text-align:center;
+        text-decoration: none;
+        color:#333;
+        text-transform: capitalize;
+    }
+    #Show-More-button{
+        display:none;
+        margin:20px auto;
+        padding:10px 20px;
+        background-color: rgb(109, 71, 109);
+        color:#fff;
+        border:none;
+        cursor:pointer;
+    }
+
+    @media screen and (max-width: 768px) 
+        {
+        .results-container{
+            width:45%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .results-container {
+            width:100%;
+
+        }
+        
+    }
